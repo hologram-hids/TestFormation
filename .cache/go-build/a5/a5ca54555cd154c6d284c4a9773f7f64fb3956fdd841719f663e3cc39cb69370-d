@@ -1,0 +1,7 @@
+./doc.go
+./kube_features.go
+./options.go
+./pflags.go
+./registry.go
+./types.go
+./zz_generated.deepcopy.go

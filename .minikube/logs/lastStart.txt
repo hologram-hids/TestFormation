@@ -1,0 +1,569 @@
+Log file created at: 2024/06/06 15:03:18
+Running on machine: srvkube
+Binary: Built with gc go1.22.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0606 15:03:18.930869   25072 out.go:291] Setting OutFile to fd 1 ...
+I0606 15:03:18.936644   25072 out.go:338] TERM=xterm,COLORTERM=, which probably does not support color
+I0606 15:03:18.936653   25072 out.go:304] Setting ErrFile to fd 2...
+I0606 15:03:18.936659   25072 out.go:338] TERM=xterm,COLORTERM=, which probably does not support color
+I0606 15:03:18.937017   25072 root.go:338] Updating PATH: /root/.minikube/bin
+W0606 15:03:18.937237   25072 root.go:314] Error reading config file at /root/.minikube/config/config.json: open /root/.minikube/config/config.json: no such file or directory
+I0606 15:03:18.937888   25072 out.go:298] Setting JSON to false
+I0606 15:03:18.942022   25072 start.go:129] hostinfo: {"hostname":"srvkube","uptime":5260,"bootTime":1717670139,"procs":205,"os":"linux","platform":"centos","platformFamily":"rhel","platformVersion":"7.9.2009","kernelVersion":"3.10.0-1160.118.1.el7.x86_64","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"26b04d56-b57a-c53d-da18-ee424857f825"}
+I0606 15:03:18.942125   25072 start.go:139] virtualization:  
+I0606 15:03:18.944244   25072 out.go:177] * minikube v1.33.1 sur Centos 7.9.2009
+W0606 15:03:18.946090   25072 preload.go:294] Failed to list preload files: open /root/.minikube/cache/preloaded-tarball: no such file or directory
+I0606 15:03:18.946604   25072 notify.go:220] Checking for updates...
+I0606 15:03:18.959318   25072 config.go:182] Loaded profile config "minikube": Driver=none, ContainerRuntime=docker, KubernetesVersion=v1.30.0
+I0606 15:03:18.960957   25072 exec_runner.go:51] Run: systemctl --version
+I0606 15:03:18.966416   25072 driver.go:392] Setting default libvirt URI to qemu:///system
+I0606 15:03:18.968611   25072 out.go:177] * Utilisation du pilote none basé sur le profil existant
+I0606 15:03:18.970264   25072 start.go:297] selected driver: none
+I0606 15:03:18.970278   25072 start.go:901] validating driver "none" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.44@sha256:eb04641328b06c5c4a14f4348470e1046bbcf9c2cbc551486e343d3a49db557e Memory:2200 CPUs:2 DiskSize:20000 Driver:none HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.30.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:false EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.174.129 Port:8443 KubernetesVersion:v1.30.0 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/root:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s}
+I0606 15:03:18.970354   25072 start.go:912] status for none: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0606 15:03:18.971734   25072 cni.go:84] Creating CNI manager for ""
+I0606 15:03:18.971751   25072 cni.go:158] "none" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0606 15:03:18.971971   25072 start.go:340] cluster config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.44@sha256:eb04641328b06c5c4a14f4348470e1046bbcf9c2cbc551486e343d3a49db557e Memory:2200 CPUs:2 DiskSize:20000 Driver:none HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.30.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:false EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.174.129 Port:8443 KubernetesVersion:v1.30.0 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/root:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s}
+I0606 15:03:18.982684   25072 out.go:177] * Démarrage du nœud "minikube" primary control-plane dans le cluster "minikube"
+I0606 15:03:18.984291   25072 profile.go:143] Saving config to /root/.minikube/profiles/minikube/config.json ...
+I0606 15:03:18.984661   25072 start.go:360] acquireMachinesLock for minikube: {Name:mkc8ab01ad3ea83211c505c81a7ee49a8e3ecb89 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0606 15:03:18.985555   25072 start.go:364] duration metric: took 682.56µs to acquireMachinesLock for "minikube"
+I0606 15:03:18.985588   25072 start.go:96] Skipping create...Using existing machine configuration
+I0606 15:03:18.985600   25072 fix.go:54] fixHost starting: 
+W0606 15:03:18.985790   25072 none.go:130] unable to get port: "minikube" does not appear in /root/.kube/config
+I0606 15:03:18.985826   25072 api_server.go:166] Checking apiserver status ...
+I0606 15:03:18.985877   25072 exec_runner.go:51] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0606 15:03:19.112785   25072 api_server.go:170] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: exit status 1
+stdout:
+
+stderr:
+I0606 15:03:19.113163   25072 exec_runner.go:51] Run: sudo systemctl is-active --quiet service kubelet
+I0606 15:03:19.219735   25072 fix.go:112] recreateIfNeeded on minikube: state=Stopped err=<nil>
+W0606 15:03:19.219784   25072 fix.go:138] unexpected machine state, will restart: <nil>
+I0606 15:03:19.222089   25072 out.go:177] * Redémarrage du none bare metal machine existant pour "minikube" ...
+I0606 15:03:19.227027   25072 profile.go:143] Saving config to /root/.minikube/profiles/minikube/config.json ...
+I0606 15:03:19.227257   25072 start.go:293] postStartSetup for "minikube" (driver="none")
+I0606 15:03:19.228031   25072 start.go:322] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0606 15:03:19.228154   25072 exec_runner.go:51] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0606 15:03:19.271354   25072 main.go:141] libmachine: Couldn't set key CPE_NAME, no corresponding struct field found
+I0606 15:03:19.271381   25072 main.go:141] libmachine: Couldn't set key , no corresponding struct field found
+I0606 15:03:19.271393   25072 main.go:141] libmachine: Couldn't set key CENTOS_MANTISBT_PROJECT, no corresponding struct field found
+I0606 15:03:19.271403   25072 main.go:141] libmachine: Couldn't set key CENTOS_MANTISBT_PROJECT_VERSION, no corresponding struct field found
+I0606 15:03:19.271413   25072 main.go:141] libmachine: Couldn't set key REDHAT_SUPPORT_PRODUCT, no corresponding struct field found
+I0606 15:03:19.271433   25072 main.go:141] libmachine: Couldn't set key REDHAT_SUPPORT_PRODUCT_VERSION, no corresponding struct field found
+I0606 15:03:19.271445   25072 main.go:141] libmachine: Couldn't set key , no corresponding struct field found
+I0606 15:03:19.274048   25072 out.go:177] * La version du système d'exploitation est CentOS Linux 7 (Core)
+I0606 15:03:19.275206   25072 filesync.go:126] Scanning /root/.minikube/addons for local assets ...
+I0606 15:03:19.275272   25072 filesync.go:126] Scanning /root/.minikube/files for local assets ...
+I0606 15:03:19.275300   25072 start.go:296] duration metric: took 48.00327ms for postStartSetup
+I0606 15:03:19.275315   25072 fix.go:56] duration metric: took 289.71816ms for fixHost
+I0606 15:03:19.275327   25072 start.go:83] releasing machines lock for "minikube", held for 289.761323ms
+I0606 15:03:19.276599   25072 exec_runner.go:51] Run: sh -c "stat /etc/cni/net.d/*loopback.conf*"
+I0606 15:03:19.277374   25072 exec_runner.go:51] Run: curl -sS -m 2 https://registry.k8s.io/
+W0606 15:03:19.285988   25072 cni.go:209] loopback cni configuration skipped: "/etc/cni/net.d/*loopback.conf*" not found
+I0606 15:03:19.286082   25072 exec_runner.go:51] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f ( ( -name *bridge* -or -name *podman* ) -and -not -name *.mk_disabled ) -printf "%p, " -exec sh -c "sudo mv {} {}.mk_disabled" ;
+I0606 15:03:19.327646   25072 cni.go:259] no active bridge cni configs found in "/etc/cni/net.d" - nothing to disable
+I0606 15:03:19.327669   25072 start.go:494] detecting cgroup driver to use...
+I0606 15:03:19.327906   25072 detect.go:196] detected "cgroupfs" cgroup driver on host os
+I0606 15:03:19.328024   25072 exec_runner.go:51] Run: /bin/bash -c "sudo mkdir -p /etc && printf %s "runtime-endpoint: unix:///run/containerd/containerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0606 15:03:19.443353   25072 exec_runner.go:51] Run: sh -c "sudo sed -i -r 's|^( *)sandbox_image = .*$|\1sandbox_image = "registry.k8s.io/pause:3.9"|' /etc/containerd/config.toml"
+I0606 15:03:19.488046   25072 exec_runner.go:51] Run: sh -c "sudo sed -i -r 's|^( *)restrict_oom_score_adj = .*$|\1restrict_oom_score_adj = false|' /etc/containerd/config.toml"
+I0606 15:03:19.529170   25072 containerd.go:146] configuring containerd to use "cgroupfs" as cgroup driver...
+I0606 15:03:19.529254   25072 exec_runner.go:51] Run: sh -c "sudo sed -i -r 's|^( *)SystemdCgroup = .*$|\1SystemdCgroup = false|g' /etc/containerd/config.toml"
+I0606 15:03:19.593098   25072 exec_runner.go:51] Run: sh -c "sudo sed -i 's|"io.containerd.runtime.v1.linux"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I0606 15:03:19.695016   25072 exec_runner.go:51] Run: sh -c "sudo sed -i '/systemd_cgroup/d' /etc/containerd/config.toml"
+I0606 15:03:19.741183   25072 exec_runner.go:51] Run: sh -c "sudo sed -i 's|"io.containerd.runc.v1"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I0606 15:03:19.783182   25072 exec_runner.go:51] Run: sh -c "sudo rm -rf /etc/cni/net.mk"
+I0606 15:03:19.847004   25072 exec_runner.go:51] Run: sh -c "sudo sed -i -r 's|^( *)conf_dir = .*$|\1conf_dir = "/etc/cni/net.d"|g' /etc/containerd/config.toml"
+I0606 15:03:19.943634   25072 exec_runner.go:51] Run: sh -c "sudo sed -i '/^ *enable_unprivileged_ports = .*/d' /etc/containerd/config.toml"
+I0606 15:03:19.988345   25072 exec_runner.go:51] Run: sh -c "sudo sed -i -r 's|^( *)\[plugins."io.containerd.grpc.v1.cri"\]|&\n\1  enable_unprivileged_ports = true|' /etc/containerd/config.toml"
+I0606 15:03:20.094476   25072 exec_runner.go:51] Run: sudo sysctl net.bridge.bridge-nf-call-iptables
+I0606 15:03:20.135579   25072 exec_runner.go:51] Run: sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+I0606 15:03:20.174091   25072 exec_runner.go:51] Run: sudo systemctl daemon-reload
+I0606 15:03:20.405586   25072 exec_runner.go:51] Run: sudo systemctl restart containerd
+I0606 15:03:20.473333   25072 exec_runner.go:84] Completed: curl -sS -m 2 https://registry.k8s.io/: (1.195817531s)
+I0606 15:03:21.059733   25072 start.go:494] detecting cgroup driver to use...
+I0606 15:03:21.059794   25072 detect.go:196] detected "cgroupfs" cgroup driver on host os
+I0606 15:03:21.060330   25072 exec_runner.go:51] Run: /bin/bash -c "sudo mkdir -p /etc && printf %s "runtime-endpoint: unix:///var/run/cri-dockerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0606 15:03:21.182691   25072 exec_runner.go:51] Run: which cri-dockerd
+I0606 15:03:21.186226   25072 exec_runner.go:51] Run: sudo mkdir -p /etc/systemd/system/cri-docker.service.d
+I0606 15:03:21.222382   25072 exec_runner.go:144] found /etc/systemd/system/cri-docker.service.d/10-cni.conf, removing ...
+I0606 15:03:21.222409   25072 exec_runner.go:203] rm: /etc/systemd/system/cri-docker.service.d/10-cni.conf
+I0606 15:03:21.222501   25072 exec_runner.go:151] cp: memory --> /etc/systemd/system/cri-docker.service.d/10-cni.conf (195 bytes)
+I0606 15:03:21.223257   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube3824857808 /etc/systemd/system/cri-docker.service.d/10-cni.conf
+I0606 15:03:21.293636   25072 exec_runner.go:51] Run: sudo systemctl unmask docker.service
+I0606 15:03:21.563084   25072 exec_runner.go:51] Run: sudo systemctl enable docker.socket
+I0606 15:03:21.723791   25072 docker.go:574] configuring docker to use "cgroupfs" as cgroup driver...
+I0606 15:03:21.724468   25072 exec_runner.go:144] found /etc/docker/daemon.json, removing ...
+I0606 15:03:21.724480   25072 exec_runner.go:203] rm: /etc/docker/daemon.json
+I0606 15:03:21.724575   25072 exec_runner.go:151] cp: memory --> /etc/docker/daemon.json (130 bytes)
+I0606 15:03:21.725201   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube530197176 /etc/docker/daemon.json
+I0606 15:03:21.774444   25072 exec_runner.go:51] Run: sudo systemctl daemon-reload
+I0606 15:03:21.979679   25072 exec_runner.go:51] Run: sudo systemctl restart docker
+I0606 15:03:27.436853   25072 exec_runner.go:84] Completed: sudo systemctl restart docker: (5.457137831s)
+I0606 15:03:27.436929   25072 exec_runner.go:51] Run: sudo systemctl is-active --quiet service cri-docker.socket
+I0606 15:03:27.488684   25072 exec_runner.go:51] Run: sudo systemctl stop cri-docker.socket
+I0606 15:03:27.532036   25072 exec_runner.go:51] Run: sudo systemctl is-active --quiet service cri-docker.service
+I0606 15:03:27.596865   25072 exec_runner.go:51] Run: sudo systemctl stop cri-docker.service
+I0606 15:03:27.739772   25072 exec_runner.go:51] Run: sudo systemctl unmask cri-docker.socket
+I0606 15:03:27.999931   25072 exec_runner.go:51] Run: sudo systemctl enable cri-docker.socket
+I0606 15:03:28.199714   25072 exec_runner.go:51] Run: sudo systemctl daemon-reload
+I0606 15:03:28.390873   25072 exec_runner.go:51] Run: sudo systemctl restart cri-docker.socket
+I0606 15:03:28.437543   25072 exec_runner.go:51] Run: sudo systemctl is-active --quiet service cri-docker.service
+I0606 15:03:28.481955   25072 exec_runner.go:51] Run: sudo systemctl daemon-reload
+I0606 15:03:28.636818   25072 exec_runner.go:51] Run: sudo systemctl restart cri-docker.service
+I0606 15:03:28.934600   25072 start.go:541] Will wait 60s for socket path /var/run/cri-dockerd.sock
+I0606 15:03:28.934688   25072 exec_runner.go:51] Run: stat /var/run/cri-dockerd.sock
+I0606 15:03:28.940778   25072 start.go:562] Will wait 60s for crictl version
+I0606 15:03:28.940868   25072 exec_runner.go:51] Run: which crictl
+I0606 15:03:28.943938   25072 exec_runner.go:51] Run: sudo /usr/bin/crictl version
+I0606 15:03:29.252275   25072 start.go:578] Version:  0.1.0
+RuntimeName:  docker
+RuntimeVersion:  26.1.4
+RuntimeApiVersion:  v1
+I0606 15:03:29.252593   25072 exec_runner.go:51] Run: docker version --format {{.Server.Version}}
+I0606 15:03:29.599314   25072 exec_runner.go:51] Run: docker version --format {{.Server.Version}}
+I0606 15:03:29.821747   25072 out.go:204] * Préparation de Kubernetes v1.30.0 sur Docker 26.1.4...
+I0606 15:03:29.837404   25072 exec_runner.go:51] Run: grep 127.0.0.1	host.minikube.internal$ /etc/hosts
+I0606 15:03:29.843239   25072 exec_runner.go:51] Run: /bin/bash -c "{ grep -v $'\thost.minikube.internal$' "/etc/hosts"; echo "127.0.0.1	host.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0606 15:03:29.897810   25072 kubeadm.go:877] updating cluster {Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.44@sha256:eb04641328b06c5c4a14f4348470e1046bbcf9c2cbc551486e343d3a49db557e Memory:2200 CPUs:2 DiskSize:20000 Driver:none HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.30.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:false EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.174.129 Port:8443 KubernetesVersion:v1.30.0 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/root:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s} ...
+I0606 15:03:29.906536   25072 preload.go:132] Checking if preload exists for k8s version v1.30.0 and runtime docker
+I0606 15:03:29.906570   25072 kubeadm.go:928] updating node { 192.168.174.129 8443 v1.30.0 docker true true} ...
+I0606 15:03:29.926839   25072 kubeadm.go:940] kubelet [Unit]
+Wants=docker.socket
+
+[Service]
+ExecStart=
+ExecStart=/var/lib/minikube/binaries/v1.30.0/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --hostname-override=srvkube --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=192.168.174.129
+
+[Install]
+ config:
+{KubernetesVersion:v1.30.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:false EnableDefaultCNI:false CNI:}
+I0606 15:03:29.926910   25072 exec_runner.go:51] Run: docker info --format {{.CgroupDriver}}
+I0606 15:03:30.296193   25072 cni.go:84] Creating CNI manager for ""
+I0606 15:03:30.296214   25072 cni.go:158] "none" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0606 15:03:30.296246   25072 kubeadm.go:84] Using pod CIDR: 10.244.0.0/16
+I0606 15:03:30.296282   25072 kubeadm.go:181] kubeadm options: {CertDir:/var/lib/minikube/certs ServiceCIDR:10.96.0.0/12 PodSubnet:10.244.0.0/16 AdvertiseAddress:192.168.174.129 APIServerPort:8443 KubernetesVersion:v1.30.0 EtcdDataDir:/var/lib/minikube/etcd EtcdExtraArgs:map[] ClusterName:minikube NodeName:srvkube DNSDomain:cluster.local CRISocket:/var/run/cri-dockerd.sock ImageRepository: ComponentOptions:[{Component:apiServer ExtraArgs:map[enable-admission-plugins:NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota] Pairs:map[certSANs:["127.0.0.1", "localhost", "192.168.174.129"]]} {Component:controllerManager ExtraArgs:map[allocate-node-cidrs:true leader-elect:false] Pairs:map[]} {Component:scheduler ExtraArgs:map[leader-elect:false] Pairs:map[]}] FeatureArgs:map[] NodeIP:192.168.174.129 CgroupDriver:cgroupfs ClientCAFile:/var/lib/minikube/certs/ca.crt StaticPodPath:/etc/kubernetes/manifests ControlPlaneAddress:control-plane.minikube.internal KubeProxyOptions:map[] ResolvConfSearchRegression:false KubeletConfigOpts:map[containerRuntimeEndpoint:unix:///var/run/cri-dockerd.sock hairpinMode:hairpin-veth runtimeRequestTimeout:15m] PrependCriSocketUnix:true}
+I0606 15:03:30.296426   25072 kubeadm.go:187] kubeadm config:
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 192.168.174.129
+  bindPort: 8443
+bootstrapTokens:
+  - groups:
+      - system:bootstrappers:kubeadm:default-node-token
+    ttl: 24h0m0s
+    usages:
+      - signing
+      - authentication
+nodeRegistration:
+  criSocket: unix:///var/run/cri-dockerd.sock
+  name: "srvkube"
+  kubeletExtraArgs:
+    node-ip: 192.168.174.129
+  taints: []
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+apiServer:
+  certSANs: ["127.0.0.1", "localhost", "192.168.174.129"]
+  extraArgs:
+    enable-admission-plugins: "NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota"
+controllerManager:
+  extraArgs:
+    allocate-node-cidrs: "true"
+    leader-elect: "false"
+scheduler:
+  extraArgs:
+    leader-elect: "false"
+certificatesDir: /var/lib/minikube/certs
+clusterName: mk
+controlPlaneEndpoint: control-plane.minikube.internal:8443
+etcd:
+  local:
+    dataDir: /var/lib/minikube/etcd
+    extraArgs:
+      proxy-refresh-interval: "70000"
+kubernetesVersion: v1.30.0
+networking:
+  dnsDomain: cluster.local
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: 10.96.0.0/12
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+authentication:
+  x509:
+    clientCAFile: /var/lib/minikube/certs/ca.crt
+cgroupDriver: cgroupfs
+containerRuntimeEndpoint: unix:///var/run/cri-dockerd.sock
+hairpinMode: hairpin-veth
+runtimeRequestTimeout: 15m
+clusterDomain: "cluster.local"
+# disable disk resource management by default
+imageGCHighThresholdPercent: 100
+evictionHard:
+  nodefs.available: "0%"
+  nodefs.inodesFree: "0%"
+  imagefs.available: "0%"
+failSwapOn: false
+staticPodPath: /etc/kubernetes/manifests
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+clusterCIDR: "10.244.0.0/16"
+metricsBindAddress: 0.0.0.0:10249
+conntrack:
+  maxPerCore: 0
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_established"
+  tcpEstablishedTimeout: 0s
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_close"
+  tcpCloseWaitTimeout: 0s
+
+I0606 15:03:30.296520   25072 exec_runner.go:51] Run: sudo ls /var/lib/minikube/binaries/v1.30.0
+I0606 15:03:30.335465   25072 binaries.go:47] Didn't find k8s binaries: sudo ls /var/lib/minikube/binaries/v1.30.0: exit status 2
+stdout:
+
+stderr:
+ls: impossible d'accéder à /var/lib/minikube/binaries/v1.30.0: Aucun fichier ou dossier de ce type
+
+Initiating transfer...
+I0606 15:03:30.335541   25072 exec_runner.go:51] Run: sudo mkdir -p /var/lib/minikube/binaries/v1.30.0
+I0606 15:03:30.373843   25072 download.go:107] Downloading: https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubelet?checksum=file:https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubelet.sha256 -> /root/.minikube/cache/linux/amd64/v1.30.0/kubelet
+I0606 15:03:30.373843   25072 download.go:107] Downloading: https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubectl?checksum=file:https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubectl.sha256 -> /root/.minikube/cache/linux/amd64/v1.30.0/kubectl
+I0606 15:03:30.374445   25072 download.go:107] Downloading: https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubeadm?checksum=file:https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubeadm.sha256 -> /root/.minikube/cache/linux/amd64/v1.30.0/kubeadm
+I0606 15:04:21.745886   25072 exec_runner.go:151] cp: /root/.minikube/cache/linux/amd64/v1.30.0/kubectl --> /var/lib/minikube/binaries/v1.30.0/kubectl (51454104 bytes)
+I0606 15:04:21.795370   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube173783801 /var/lib/minikube/binaries/v1.30.0/kubectl
+I0606 15:04:53.797419   25072 exec_runner.go:151] cp: /root/.minikube/cache/linux/amd64/v1.30.0/kubeadm --> /var/lib/minikube/binaries/v1.30.0/kubeadm (50249880 bytes)
+I0606 15:04:53.846312   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube206208547 /var/lib/minikube/binaries/v1.30.0/kubeadm
+I0606 15:05:05.109799   25072 exec_runner.go:51] Run: sudo systemctl is-active --quiet service kubelet
+I0606 15:05:05.271244   25072 exec_runner.go:151] cp: /root/.minikube/cache/linux/amd64/v1.30.0/kubelet --> /var/lib/minikube/binaries/v1.30.0/kubelet (100100024 bytes)
+I0606 15:05:05.359708   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube3045771244 /var/lib/minikube/binaries/v1.30.0/kubelet
+I0606 15:05:05.558534   25072 exec_runner.go:51] Run: sudo mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system /var/tmp/minikube
+I0606 15:05:05.720615   25072 exec_runner.go:151] cp: memory --> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf (309 bytes)
+I0606 15:05:05.720949   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube3616691455 /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+I0606 15:05:05.833780   25072 exec_runner.go:151] cp: memory --> /lib/systemd/system/kubelet.service (352 bytes)
+I0606 15:05:05.834039   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube623064913 /lib/systemd/system/kubelet.service
+I0606 15:05:06.047868   25072 exec_runner.go:151] cp: memory --> /var/tmp/minikube/kubeadm.yaml.new (2158 bytes)
+I0606 15:05:06.048576   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube3477144108 /var/tmp/minikube/kubeadm.yaml.new
+I0606 15:05:06.157727   25072 exec_runner.go:51] Run: grep 192.168.174.129	control-plane.minikube.internal$ /etc/hosts
+I0606 15:05:06.172736   25072 exec_runner.go:51] Run: /bin/bash -c "{ grep -v $'\tcontrol-plane.minikube.internal$' "/etc/hosts"; echo "192.168.174.129	control-plane.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0606 15:05:06.268302   25072 exec_runner.go:51] Run: sudo systemctl daemon-reload
+I0606 15:05:06.453621   25072 exec_runner.go:51] Run: sudo systemctl start kubelet
+I0606 15:05:06.688691   25072 certs.go:68] Setting up /root/.minikube/profiles/minikube for IP: 192.168.174.129
+I0606 15:05:06.688709   25072 certs.go:194] generating shared ca certs ...
+I0606 15:05:06.688736   25072 certs.go:226] acquiring lock for ca certs: {Name:mkb814c315fe9b7fabb439d6d58c5448fbb7853c Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:06.689439   25072 certs.go:240] generating "minikubeCA" ca cert: /root/.minikube/ca.key
+I0606 15:05:07.138937   25072 crypto.go:156] Writing cert to /root/.minikube/ca.crt ...
+I0606 15:05:07.138953   25072 lock.go:35] WriteFile acquiring /root/.minikube/ca.crt: {Name:mk748923f05408fc6b894e88d2f62f90f80f521f Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:07.139347   25072 crypto.go:164] Writing key to /root/.minikube/ca.key ...
+I0606 15:05:07.139354   25072 lock.go:35] WriteFile acquiring /root/.minikube/ca.key: {Name:mkadab1dda45ad4e9b64e75e19812de132576577 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:07.139523   25072 certs.go:240] generating "proxyClientCA" ca cert: /root/.minikube/proxy-client-ca.key
+I0606 15:05:07.186850   25072 crypto.go:156] Writing cert to /root/.minikube/proxy-client-ca.crt ...
+I0606 15:05:07.186862   25072 lock.go:35] WriteFile acquiring /root/.minikube/proxy-client-ca.crt: {Name:mkff7217c4d17525a6f0f7c4ccc47f0953a17f51 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:07.187150   25072 crypto.go:164] Writing key to /root/.minikube/proxy-client-ca.key ...
+I0606 15:05:07.187156   25072 lock.go:35] WriteFile acquiring /root/.minikube/proxy-client-ca.key: {Name:mkd65fc0723375be0692aee2901eb2e57ab2760f Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:07.187295   25072 certs.go:256] generating profile certs ...
+I0606 15:05:07.187356   25072 certs.go:363] generating signed profile cert for "minikube-user": /root/.minikube/profiles/minikube/client.key
+I0606 15:05:07.187368   25072 crypto.go:68] Generating cert /root/.minikube/profiles/minikube/client.crt with IP's: []
+I0606 15:05:07.574336   25072 crypto.go:156] Writing cert to /root/.minikube/profiles/minikube/client.crt ...
+I0606 15:05:07.574352   25072 lock.go:35] WriteFile acquiring /root/.minikube/profiles/minikube/client.crt: {Name:mk09878e812b07af637940656ec44996daba95aa Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:07.574647   25072 crypto.go:164] Writing key to /root/.minikube/profiles/minikube/client.key ...
+I0606 15:05:07.574654   25072 lock.go:35] WriteFile acquiring /root/.minikube/profiles/minikube/client.key: {Name:mkf3b978f9858871583d8228f83a87a85b7d106f Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:07.574760   25072 certs.go:363] generating signed profile cert for "minikube": /root/.minikube/profiles/minikube/apiserver.key.5b767bee
+I0606 15:05:07.574774   25072 crypto.go:68] Generating cert /root/.minikube/profiles/minikube/apiserver.crt.5b767bee with IP's: [10.96.0.1 127.0.0.1 10.0.0.1 192.168.174.129]
+I0606 15:05:08.300407   25072 crypto.go:156] Writing cert to /root/.minikube/profiles/minikube/apiserver.crt.5b767bee ...
+I0606 15:05:08.300427   25072 lock.go:35] WriteFile acquiring /root/.minikube/profiles/minikube/apiserver.crt.5b767bee: {Name:mk943041145bd4ac1e9fcf030aefe36fa588b5b6 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:08.300805   25072 crypto.go:164] Writing key to /root/.minikube/profiles/minikube/apiserver.key.5b767bee ...
+I0606 15:05:08.300815   25072 lock.go:35] WriteFile acquiring /root/.minikube/profiles/minikube/apiserver.key.5b767bee: {Name:mk446d2159ae1f5c4ccb46978993b73a02bb3b9e Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:08.300977   25072 certs.go:381] copying /root/.minikube/profiles/minikube/apiserver.crt.5b767bee -> /root/.minikube/profiles/minikube/apiserver.crt
+I0606 15:05:08.301175   25072 certs.go:385] copying /root/.minikube/profiles/minikube/apiserver.key.5b767bee -> /root/.minikube/profiles/minikube/apiserver.key
+I0606 15:05:08.301297   25072 certs.go:363] generating signed profile cert for "aggregator": /root/.minikube/profiles/minikube/proxy-client.key
+I0606 15:05:08.301318   25072 crypto.go:68] Generating cert /root/.minikube/profiles/minikube/proxy-client.crt with IP's: []
+I0606 15:05:09.039873   25072 crypto.go:156] Writing cert to /root/.minikube/profiles/minikube/proxy-client.crt ...
+I0606 15:05:09.039901   25072 lock.go:35] WriteFile acquiring /root/.minikube/profiles/minikube/proxy-client.crt: {Name:mkcab3ddb18cd096d978df14d87a44e804896057 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:09.040356   25072 crypto.go:164] Writing key to /root/.minikube/profiles/minikube/proxy-client.key ...
+I0606 15:05:09.040369   25072 lock.go:35] WriteFile acquiring /root/.minikube/profiles/minikube/proxy-client.key: {Name:mkaff5bf6f623f02423597918f5f33c2a99a3db1 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:05:09.040796   25072 certs.go:484] found cert: /root/.minikube/certs/ca-key.pem (1679 bytes)
+I0606 15:05:09.040861   25072 certs.go:484] found cert: /root/.minikube/certs/ca.pem (1074 bytes)
+I0606 15:05:09.040907   25072 certs.go:484] found cert: /root/.minikube/certs/cert.pem (1115 bytes)
+I0606 15:05:09.040946   25072 certs.go:484] found cert: /root/.minikube/certs/key.pem (1675 bytes)
+I0606 15:05:09.093569   25072 exec_runner.go:151] cp: /root/.minikube/ca.crt --> /var/lib/minikube/certs/ca.crt (1111 bytes)
+I0606 15:05:09.093929   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube1429859305 /var/lib/minikube/certs/ca.crt
+I0606 15:05:09.156420   25072 exec_runner.go:151] cp: /root/.minikube/ca.key --> /var/lib/minikube/certs/ca.key (1679 bytes)
+I0606 15:05:09.156755   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube4148556018 /var/lib/minikube/certs/ca.key
+I0606 15:05:09.278255   25072 exec_runner.go:151] cp: /root/.minikube/proxy-client-ca.crt --> /var/lib/minikube/certs/proxy-client-ca.crt (1119 bytes)
+I0606 15:05:09.278611   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube3680736360 /var/lib/minikube/certs/proxy-client-ca.crt
+I0606 15:05:09.320196   25072 exec_runner.go:151] cp: /root/.minikube/proxy-client-ca.key --> /var/lib/minikube/certs/proxy-client-ca.key (1679 bytes)
+I0606 15:05:09.320446   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube4285744185 /var/lib/minikube/certs/proxy-client-ca.key
+I0606 15:05:09.358654   25072 exec_runner.go:151] cp: /root/.minikube/profiles/minikube/apiserver.crt --> /var/lib/minikube/certs/apiserver.crt (1411 bytes)
+I0606 15:05:09.358892   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube3562407578 /var/lib/minikube/certs/apiserver.crt
+I0606 15:05:09.396714   25072 exec_runner.go:151] cp: /root/.minikube/profiles/minikube/apiserver.key --> /var/lib/minikube/certs/apiserver.key (1675 bytes)
+I0606 15:05:09.397089   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube974971250 /var/lib/minikube/certs/apiserver.key
+I0606 15:05:09.475413   25072 exec_runner.go:151] cp: /root/.minikube/profiles/minikube/proxy-client.crt --> /var/lib/minikube/certs/proxy-client.crt (1147 bytes)
+I0606 15:05:09.475738   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube2196195577 /var/lib/minikube/certs/proxy-client.crt
+I0606 15:05:09.518546   25072 exec_runner.go:151] cp: /root/.minikube/profiles/minikube/proxy-client.key --> /var/lib/minikube/certs/proxy-client.key (1679 bytes)
+I0606 15:05:09.518820   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube1558488426 /var/lib/minikube/certs/proxy-client.key
+I0606 15:05:09.563737   25072 exec_runner.go:151] cp: /root/.minikube/ca.crt --> /usr/share/ca-certificates/minikubeCA.pem (1111 bytes)
+I0606 15:05:09.563975   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube2058384201 /usr/share/ca-certificates/minikubeCA.pem
+I0606 15:05:09.620310   25072 exec_runner.go:151] cp: memory --> /var/lib/minikube/kubeconfig (738 bytes)
+I0606 15:05:09.620569   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube3896824774 /var/lib/minikube/kubeconfig
+I0606 15:05:09.917973   25072 exec_runner.go:51] Run: openssl version
+I0606 15:05:09.953293   25072 exec_runner.go:51] Run: sudo /bin/bash -c "test -s /usr/share/ca-certificates/minikubeCA.pem && ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem"
+I0606 15:05:10.018402   25072 exec_runner.go:51] Run: ls -la /usr/share/ca-certificates/minikubeCA.pem
+I0606 15:05:10.036320   25072 certs.go:528] hashing: -rw-r--r--. 1 root root 1111  6 juin  15:05 /usr/share/ca-certificates/minikubeCA.pem
+I0606 15:05:10.036383   25072 exec_runner.go:51] Run: openssl x509 -hash -noout -in /usr/share/ca-certificates/minikubeCA.pem
+I0606 15:05:10.056315   25072 exec_runner.go:51] Run: sudo /bin/bash -c "test -L /etc/ssl/certs/b5213941.0 || ln -fs /etc/ssl/certs/minikubeCA.pem /etc/ssl/certs/b5213941.0"
+I0606 15:05:10.142195   25072 exec_runner.go:51] Run: stat /var/lib/minikube/certs/apiserver-kubelet-client.crt
+I0606 15:05:10.146419   25072 certs.go:399] 'apiserver-kubelet-client' cert doesn't exist, likely first start: stat /var/lib/minikube/certs/apiserver-kubelet-client.crt: exit status 1
+stdout:
+
+stderr:
+stat: impossible d'évaluer « /var/lib/minikube/certs/apiserver-kubelet-client.crt »: Aucun fichier ou dossier de ce type
+I0606 15:05:10.146463   25072 kubeadm.go:391] StartCluster: {Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.44@sha256:eb04641328b06c5c4a14f4348470e1046bbcf9c2cbc551486e343d3a49db557e Memory:2200 CPUs:2 DiskSize:20000 Driver:none HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.30.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:false EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.174.129 Port:8443 KubernetesVersion:v1.30.0 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/root:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s}
+I0606 15:05:10.146801   25072 exec_runner.go:51] Run: docker ps --filter status=paused --filter=name=k8s_.*_(kube-system)_ --format={{.ID}}
+I0606 15:05:10.273865   25072 exec_runner.go:51] Run: sudo ls /var/lib/kubelet/kubeadm-flags.env /var/lib/kubelet/config.yaml /var/lib/minikube/etcd
+I0606 15:05:10.323748   25072 exec_runner.go:51] Run: sudo cp /var/tmp/minikube/kubeadm.yaml.new /var/tmp/minikube/kubeadm.yaml
+I0606 15:05:10.362366   25072 exec_runner.go:51] Run: docker version --format {{.Server.Version}}
+I0606 15:05:10.410416   25072 exec_runner.go:51] Run: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf
+I0606 15:05:10.448361   25072 kubeadm.go:154] config check failed, skipping stale config cleanup: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf: exit status 2
+stdout:
+
+stderr:
+ls: impossible d'accéder à /etc/kubernetes/admin.conf: Aucun fichier ou dossier de ce type
+ls: impossible d'accéder à /etc/kubernetes/kubelet.conf: Aucun fichier ou dossier de ce type
+ls: impossible d'accéder à /etc/kubernetes/controller-manager.conf: Aucun fichier ou dossier de ce type
+ls: impossible d'accéder à /etc/kubernetes/scheduler.conf: Aucun fichier ou dossier de ce type
+I0606 15:05:10.448373   25072 kubeadm.go:156] found existing configuration files:
+
+I0606 15:05:10.448410   25072 exec_runner.go:51] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/admin.conf
+I0606 15:05:10.483855   25072 kubeadm.go:162] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/admin.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/admin.conf: exit status 2
+stdout:
+
+stderr:
+grep: /etc/kubernetes/admin.conf: Aucun fichier ou dossier de ce type
+I0606 15:05:10.483913   25072 exec_runner.go:51] Run: sudo rm -f /etc/kubernetes/admin.conf
+I0606 15:05:10.531596   25072 exec_runner.go:51] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/kubelet.conf
+I0606 15:05:10.567577   25072 kubeadm.go:162] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/kubelet.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/kubelet.conf: exit status 2
+stdout:
+
+stderr:
+grep: /etc/kubernetes/kubelet.conf: Aucun fichier ou dossier de ce type
+I0606 15:05:10.567640   25072 exec_runner.go:51] Run: sudo rm -f /etc/kubernetes/kubelet.conf
+I0606 15:05:10.722063   25072 exec_runner.go:51] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/controller-manager.conf
+I0606 15:05:11.018035   25072 kubeadm.go:162] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/controller-manager.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/controller-manager.conf: exit status 2
+stdout:
+
+stderr:
+grep: /etc/kubernetes/controller-manager.conf: Aucun fichier ou dossier de ce type
+I0606 15:05:11.018289   25072 exec_runner.go:51] Run: sudo rm -f /etc/kubernetes/controller-manager.conf
+I0606 15:05:11.126446   25072 exec_runner.go:51] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/scheduler.conf
+I0606 15:05:11.161450   25072 kubeadm.go:162] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/scheduler.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/scheduler.conf: exit status 2
+stdout:
+
+stderr:
+grep: /etc/kubernetes/scheduler.conf: Aucun fichier ou dossier de ce type
+I0606 15:05:11.161516   25072 exec_runner.go:51] Run: sudo rm -f /etc/kubernetes/scheduler.conf
+I0606 15:05:11.195481   25072 exec_runner.go:97] Start: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem"
+I0606 15:05:11.587552   25072 kubeadm.go:309] [init] Using Kubernetes version: v1.30.0
+I0606 15:05:11.587887   25072 kubeadm.go:309] [preflight] Running pre-flight checks
+I0606 15:05:11.621988   25072 kubeadm.go:309] 	[WARNING Firewalld]: firewalld is active, please ensure ports [8443 10250] are open or your cluster may not function correctly
+I0606 15:05:12.075976   25072 kubeadm.go:309] 	[WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+I0606 15:05:12.497205   25072 kubeadm.go:309] 	[WARNING Hostname]: hostname "srvkube" could not be reached
+I0606 15:05:12.497217   25072 kubeadm.go:309] 	[WARNING Hostname]: hostname "srvkube": lookup srvkube on 192.168.174.2:53: no such host
+I0606 15:05:12.637148   25072 kubeadm.go:309] 	[WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+I0606 15:05:12.637623   25072 kubeadm.go:309] [preflight] Pulling images required for setting up a Kubernetes cluster
+I0606 15:05:12.637642   25072 kubeadm.go:309] [preflight] This might take a minute or two, depending on the speed of your internet connection
+I0606 15:05:12.637645   25072 kubeadm.go:309] [preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+I0606 15:08:52.378273   25072 kubeadm.go:309] [certs] Using certificateDir folder "/var/lib/minikube/certs"
+I0606 15:08:52.379419   25072 out.go:204]   - Génération des certificats et des clés
+I0606 15:08:52.379692   25072 kubeadm.go:309] [certs] Using existing ca certificate authority
+I0606 15:08:52.379697   25072 kubeadm.go:309] [certs] Using existing apiserver certificate and key on disk
+I0606 15:08:52.455267   25072 kubeadm.go:309] [certs] Generating "apiserver-kubelet-client" certificate and key
+I0606 15:08:52.839283   25072 kubeadm.go:309] [certs] Generating "front-proxy-ca" certificate and key
+I0606 15:08:53.036135   25072 kubeadm.go:309] [certs] Generating "front-proxy-client" certificate and key
+I0606 15:08:53.215226   25072 kubeadm.go:309] [certs] Generating "etcd/ca" certificate and key
+I0606 15:08:53.372749   25072 kubeadm.go:309] [certs] Generating "etcd/server" certificate and key
+I0606 15:08:53.372894   25072 kubeadm.go:309] [certs] etcd/server serving cert is signed for DNS names [localhost srvkube] and IPs [192.168.174.129 127.0.0.1 ::1]
+I0606 15:08:53.512466   25072 kubeadm.go:309] [certs] Generating "etcd/peer" certificate and key
+I0606 15:08:53.512645   25072 kubeadm.go:309] [certs] etcd/peer serving cert is signed for DNS names [localhost srvkube] and IPs [192.168.174.129 127.0.0.1 ::1]
+I0606 15:08:54.284197   25072 kubeadm.go:309] [certs] Generating "etcd/healthcheck-client" certificate and key
+I0606 15:08:54.396435   25072 kubeadm.go:309] [certs] Generating "apiserver-etcd-client" certificate and key
+I0606 15:08:54.551939   25072 kubeadm.go:309] [certs] Generating "sa" key and public key
+I0606 15:08:54.552124   25072 kubeadm.go:309] [kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+I0606 15:08:54.648591   25072 kubeadm.go:309] [kubeconfig] Writing "admin.conf" kubeconfig file
+I0606 15:08:54.876256   25072 kubeadm.go:309] [kubeconfig] Writing "super-admin.conf" kubeconfig file
+I0606 15:08:55.237134   25072 kubeadm.go:309] [kubeconfig] Writing "kubelet.conf" kubeconfig file
+I0606 15:08:56.043589   25072 kubeadm.go:309] [kubeconfig] Writing "controller-manager.conf" kubeconfig file
+I0606 15:08:56.181704   25072 kubeadm.go:309] [kubeconfig] Writing "scheduler.conf" kubeconfig file
+I0606 15:08:56.195005   25072 kubeadm.go:309] [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+I0606 15:08:56.215078   25072 kubeadm.go:309] [control-plane] Using manifest folder "/etc/kubernetes/manifests"
+I0606 15:08:56.217586   25072 out.go:204]   - Démarrage du plan de contrôle ...
+I0606 15:08:56.220559   25072 kubeadm.go:309] [control-plane] Creating static Pod manifest for "kube-apiserver"
+I0606 15:08:56.220907   25072 kubeadm.go:309] [control-plane] Creating static Pod manifest for "kube-controller-manager"
+I0606 15:08:56.220918   25072 kubeadm.go:309] [control-plane] Creating static Pod manifest for "kube-scheduler"
+I0606 15:08:56.293303   25072 kubeadm.go:309] [kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+I0606 15:08:56.295575   25072 kubeadm.go:309] [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+I0606 15:08:56.295747   25072 kubeadm.go:309] [kubelet-start] Starting the kubelet
+I0606 15:08:56.604458   25072 kubeadm.go:309] [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests"
+I0606 15:08:56.604478   25072 kubeadm.go:309] [kubelet-check] Waiting for a healthy kubelet. This can take up to 4m0s
+I0606 15:08:57.603213   25072 kubeadm.go:309] [kubelet-check] The kubelet is healthy after 1.004383838s
+I0606 15:08:57.603231   25072 kubeadm.go:309] [api-check] Waiting for a healthy API server. This can take up to 4m0s
+I0606 15:09:06.105397   25072 kubeadm.go:309] [api-check] The API server is healthy after 8.502162185s
+I0606 15:09:06.265832   25072 kubeadm.go:309] [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+I0606 15:09:06.276934   25072 kubeadm.go:309] [kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
+I0606 15:09:06.352800   25072 kubeadm.go:309] [upload-certs] Skipping phase. Please see --upload-certs
+I0606 15:09:06.352818   25072 kubeadm.go:309] [mark-control-plane] Marking the node srvkube as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
+I0606 15:09:06.363294   25072 kubeadm.go:309] [bootstrap-token] Using token: yor0pi.tnyr4zvphred5jd2
+I0606 15:09:06.364860   25072 out.go:204]   - Configuration des règles RBAC ...
+I0606 15:09:06.365413   25072 kubeadm.go:309] [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+I0606 15:09:06.371567   25072 kubeadm.go:309] [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
+I0606 15:09:06.380878   25072 kubeadm.go:309] [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+I0606 15:09:06.385383   25072 kubeadm.go:309] [bootstrap-token] Configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+I0606 15:09:06.390379   25072 kubeadm.go:309] [bootstrap-token] Configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+I0606 15:09:06.406216   25072 kubeadm.go:309] [bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+I0606 15:09:06.548800   25072 kubeadm.go:309] [kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+I0606 15:09:06.989032   25072 kubeadm.go:309] [addons] Applied essential addon: CoreDNS
+I0606 15:09:07.568602   25072 kubeadm.go:309] [addons] Applied essential addon: kube-proxy
+I0606 15:09:07.570511   25072 kubeadm.go:309] 
+I0606 15:09:07.570521   25072 kubeadm.go:309] Your Kubernetes control-plane has initialized successfully!
+I0606 15:09:07.570525   25072 kubeadm.go:309] 
+I0606 15:09:07.570528   25072 kubeadm.go:309] To start using your cluster, you need to run the following as a regular user:
+I0606 15:09:07.570530   25072 kubeadm.go:309] 
+I0606 15:09:07.570533   25072 kubeadm.go:309]   mkdir -p $HOME/.kube
+I0606 15:09:07.570536   25072 kubeadm.go:309]   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+I0606 15:09:07.570538   25072 kubeadm.go:309]   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+I0606 15:09:07.570540   25072 kubeadm.go:309] 
+I0606 15:09:07.570542   25072 kubeadm.go:309] Alternatively, if you are the root user, you can run:
+I0606 15:09:07.570545   25072 kubeadm.go:309] 
+I0606 15:09:07.570552   25072 kubeadm.go:309]   export KUBECONFIG=/etc/kubernetes/admin.conf
+I0606 15:09:07.570554   25072 kubeadm.go:309] 
+I0606 15:09:07.570556   25072 kubeadm.go:309] You should now deploy a pod network to the cluster.
+I0606 15:09:07.570559   25072 kubeadm.go:309] Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+I0606 15:09:07.570572   25072 kubeadm.go:309]   https://kubernetes.io/docs/concepts/cluster-administration/addons/
+I0606 15:09:07.570575   25072 kubeadm.go:309] 
+I0606 15:09:07.570578   25072 kubeadm.go:309] You can now join any number of control-plane nodes by copying certificate authorities
+I0606 15:09:07.570581   25072 kubeadm.go:309] and service account keys on each node and then running the following as root:
+I0606 15:09:07.570583   25072 kubeadm.go:309] 
+I0606 15:09:07.570585   25072 kubeadm.go:309]   kubeadm join control-plane.minikube.internal:8443 --token yor0pi.tnyr4zvphred5jd2 \
+I0606 15:09:07.570594   25072 kubeadm.go:309] 	--discovery-token-ca-cert-hash sha256:0f5760c394ddc067a191439a9ebd184ffea2b80cb9e6236d1d3f196a9888d05e \
+I0606 15:09:07.570597   25072 kubeadm.go:309] 	--control-plane 
+I0606 15:09:07.570599   25072 kubeadm.go:309] 
+I0606 15:09:07.570601   25072 kubeadm.go:309] Then you can join any number of worker nodes by running the following on each as root:
+I0606 15:09:07.570604   25072 kubeadm.go:309] 
+I0606 15:09:07.570606   25072 kubeadm.go:309] kubeadm join control-plane.minikube.internal:8443 --token yor0pi.tnyr4zvphred5jd2 \
+I0606 15:09:07.570608   25072 kubeadm.go:309] 	--discovery-token-ca-cert-hash sha256:0f5760c394ddc067a191439a9ebd184ffea2b80cb9e6236d1d3f196a9888d05e 
+I0606 15:09:07.579022   25072 cni.go:84] Creating CNI manager for ""
+I0606 15:09:07.579042   25072 cni.go:158] "none" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0606 15:09:07.580031   25072 out.go:177] * Configuration de bridge CNI (Container Networking Interface)...
+I0606 15:09:07.581216   25072 exec_runner.go:51] Run: sudo mkdir -p /etc/cni/net.d
+I0606 15:09:07.641521   25072 exec_runner.go:151] cp: memory --> /etc/cni/net.d/1-k8s.conflist (496 bytes)
+I0606 15:09:07.642641   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube1430569438 /etc/cni/net.d/1-k8s.conflist
+I0606 15:09:07.680032   25072 exec_runner.go:51] Run: /bin/bash -c "cat /proc/$(pgrep kube-apiserver)/oom_adj"
+I0606 15:09:07.680062   25072 exec_runner.go:51] Run: sudo /var/lib/minikube/binaries/v1.30.0/kubectl create clusterrolebinding minikube-rbac --clusterrole=cluster-admin --serviceaccount=kube-system:default --kubeconfig=/var/lib/minikube/kubeconfig
+I0606 15:09:07.680484   25072 exec_runner.go:51] Run: sudo /var/lib/minikube/binaries/v1.30.0/kubectl --kubeconfig=/var/lib/minikube/kubeconfig label --overwrite nodes srvkube minikube.k8s.io/updated_at=2024_06_06T15_09_07_0700 minikube.k8s.io/version=v1.33.1 minikube.k8s.io/commit=5883c09216182566a63dff4c326a6fc9ed2982ff minikube.k8s.io/name=minikube minikube.k8s.io/primary=true
+I0606 15:09:07.750966   25072 ops.go:34] apiserver oom_adj: -16
+I0606 15:09:07.832063   25072 kubeadm.go:1107] duration metric: took 152.081481ms to wait for elevateKubeSystemPrivileges
+W0606 15:09:07.884465   25072 kubeadm.go:286] apiserver tunnel failed: apiserver port not set
+I0606 15:09:07.884478   25072 kubeadm.go:393] duration metric: took 3m57.738021613s to StartCluster
+I0606 15:09:07.884529   25072 settings.go:142] acquiring lock: {Name:mk19004591210340446308469f521c5cfa3e1599 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:09:07.884786   25072 settings.go:150] Updating kubeconfig:  /root/.kube/config
+I0606 15:09:07.885235   25072 lock.go:35] WriteFile acquiring /root/.kube/config: {Name:mk72a1487fd2da23da9e8181e16f352a6105bd56 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0606 15:09:07.887183   25072 out.go:177] * Configuration de l'environnement de l'hôte local...
+I0606 15:09:07.886516   25072 config.go:182] Loaded profile config "minikube": Driver=none, ContainerRuntime=docker, KubernetesVersion=v1.30.0
+W0606 15:09:07.888503   25072 out.go:239] * 
+I0606 15:09:07.886569   25072 addons.go:502] enable addons start: toEnable=map[ambassador:false auto-pause:false cloud-spanner:false csi-hostpath-driver:false dashboard:false default-storageclass:true efk:false freshpod:false gcp-auth:false gvisor:false headlamp:false helm-tiller:false inaccel:false ingress:false ingress-dns:false inspektor-gadget:false istio:false istio-provisioner:false kong:false kubeflow:false kubevirt:false logviewer:false metallb:false metrics-server:false nvidia-device-plugin:false nvidia-driver-installer:false nvidia-gpu-device-plugin:false olm:false pod-security-policy:false portainer:false registry:false registry-aliases:false registry-creds:false storage-provisioner:true storage-provisioner-gluster:false storage-provisioner-rancher:false volumesnapshots:false yakd:false]
+I0606 15:09:07.888662   25072 addons.go:69] Setting storage-provisioner=true in profile "minikube"
+I0606 15:09:07.888704   25072 addons.go:234] Setting addon storage-provisioner=true in "minikube"
+W0606 15:09:07.888710   25072 out.go:239] ! Le pilote 'none' est conçu pour les experts qui doivent s'intégrer à une machine virtuelle existante
+I0606 15:09:07.888736   25072 host.go:66] Checking if "minikube" exists ...
+W0606 15:09:07.888797   25072 out.go:239] * La plupart des utilisateurs devraient plutôt utiliser le nouveau pilote 'docker', qui ne nécessite pas de root !
+W0606 15:09:07.888814   25072 out.go:239] * Pour plus d'informations, voir : https://minikube.sigs.k8s.io/docs/reference/drivers/none/
+W0606 15:09:07.888823   25072 out.go:239] * 
+W0606 15:09:07.888871   25072 out.go:239] ! Les configurations kubectl et minikube seront stockées dans le dossier /root.
+W0606 15:09:07.888884   25072 out.go:239] ! Pour utiliser les commandes kubectl ou minikube sous votre propre nom d'utilisateur, vous devrez peut-être les déplacer. Par exemple, pour écraser vos propres paramètres, exécutez la commande suivante :
+W0606 15:09:07.888961   25072 out.go:239] * 
+W0606 15:09:07.889007   25072 out.go:239]   - sudo mv /root/.kube /root/.minikube $HOME
+W0606 15:09:07.889021   25072 out.go:239]   - sudo chown -R $USER $HOME/.kube $HOME/.minikube
+W0606 15:09:07.889030   25072 out.go:239] * 
+W0606 15:09:07.889039   25072 out.go:239] * Cette opération peut également être réalisée en définissant la variable d'environment "CHANGE_MINIKUBE_NONE_USER=true".
+I0606 15:09:07.889095   25072 start.go:234] Will wait 6m0s for node &{Name: IP:192.168.174.129 Port:8443 KubernetesVersion:v1.30.0 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0606 15:09:07.891513   25072 out.go:177] * Vérification des composants Kubernetes...
+I0606 15:09:07.889640   25072 addons.go:69] Setting default-storageclass=true in profile "minikube"
+I0606 15:09:07.893029   25072 kubeconfig.go:125] found "minikube" server: "https://192.168.174.129:8443"
+I0606 15:09:07.893082   25072 api_server.go:166] Checking apiserver status ...
+I0606 15:09:07.893136   25072 exec_runner.go:51] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0606 15:09:07.893272   25072 addons_storage_classes.go:33] enableOrDisableStorageClasses default-storageclass=true on "minikube"
+I0606 15:09:07.893291   25072 exec_runner.go:51] Run: sudo systemctl daemon-reload
+I0606 15:09:07.893718   25072 kubeconfig.go:125] found "minikube" server: "https://192.168.174.129:8443"
+I0606 15:09:07.893725   25072 api_server.go:166] Checking apiserver status ...
+I0606 15:09:07.893749   25072 exec_runner.go:51] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0606 15:09:07.947154   25072 exec_runner.go:51] Run: sudo egrep ^[0-9]+:freezer: /proc/26428/cgroup
+I0606 15:09:07.959944   25072 exec_runner.go:51] Run: sudo egrep ^[0-9]+:freezer: /proc/26428/cgroup
+I0606 15:09:08.019240   25072 api_server.go:182] apiserver freezer: "2:freezer:/kubepods/burstable/pode1161f1b3e871cc7ca387c45e586828a/a761588805bfe0675016679a9afa94bb44273ba811dcaad40cfb5dc81a51f204"
+I0606 15:09:08.019319   25072 exec_runner.go:51] Run: sudo cat /sys/fs/cgroup/freezer/kubepods/burstable/pode1161f1b3e871cc7ca387c45e586828a/a761588805bfe0675016679a9afa94bb44273ba811dcaad40cfb5dc81a51f204/freezer.state
+I0606 15:09:08.038817   25072 api_server.go:182] apiserver freezer: "2:freezer:/kubepods/burstable/pode1161f1b3e871cc7ca387c45e586828a/a761588805bfe0675016679a9afa94bb44273ba811dcaad40cfb5dc81a51f204"
+I0606 15:09:08.038971   25072 exec_runner.go:51] Run: sudo cat /sys/fs/cgroup/freezer/kubepods/burstable/pode1161f1b3e871cc7ca387c45e586828a/a761588805bfe0675016679a9afa94bb44273ba811dcaad40cfb5dc81a51f204/freezer.state
+I0606 15:09:08.082929   25072 api_server.go:204] freezer state: "THAWED"
+I0606 15:09:08.082966   25072 api_server.go:253] Checking apiserver healthz at https://192.168.174.129:8443/healthz ...
+I0606 15:09:08.087575   25072 api_server.go:204] freezer state: "THAWED"
+I0606 15:09:08.087598   25072 api_server.go:253] Checking apiserver healthz at https://192.168.174.129:8443/healthz ...
+I0606 15:09:08.091037   25072 api_server.go:279] https://192.168.174.129:8443/healthz returned 200:
+ok
+I0606 15:09:08.097437   25072 api_server.go:279] https://192.168.174.129:8443/healthz returned 200:
+ok
+I0606 15:09:08.109956   25072 out.go:177]   - Utilisation de l'image gcr.io/k8s-minikube/storage-provisioner:v5
+I0606 15:09:08.111969   25072 addons.go:426] installing /etc/kubernetes/addons/storage-provisioner.yaml
+I0606 15:09:08.112294   25072 exec_runner.go:151] cp: memory --> /etc/kubernetes/addons/storage-provisioner.yaml (2676 bytes)
+I0606 15:09:08.111294   25072 addons.go:234] Setting addon default-storageclass=true in "minikube"
+I0606 15:09:08.112871   25072 host.go:66] Checking if "minikube" exists ...
+I0606 15:09:08.114596   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube2341759773 /etc/kubernetes/addons/storage-provisioner.yaml
+I0606 15:09:08.120082   25072 kubeconfig.go:125] found "minikube" server: "https://192.168.174.129:8443"
+I0606 15:09:08.120130   25072 api_server.go:166] Checking apiserver status ...
+I0606 15:09:08.120457   25072 exec_runner.go:51] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0606 15:09:08.145367   25072 exec_runner.go:51] Run: sudo systemctl start kubelet
+I0606 15:09:08.209905   25072 exec_runner.go:51] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.30.0/kubectl apply -f /etc/kubernetes/addons/storage-provisioner.yaml
+I0606 15:09:08.224149   25072 api_server.go:52] waiting for apiserver process to appear ...
+I0606 15:09:08.224233   25072 exec_runner.go:51] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0606 15:09:08.236344   25072 exec_runner.go:51] Run: sudo egrep ^[0-9]+:freezer: /proc/26428/cgroup
+I0606 15:09:08.293303   25072 api_server.go:72] duration metric: took 404.14083ms to wait for apiserver process to appear ...
+I0606 15:09:08.293322   25072 api_server.go:88] waiting for apiserver healthz status ...
+I0606 15:09:08.293346   25072 api_server.go:253] Checking apiserver healthz at https://192.168.174.129:8443/healthz ...
+I0606 15:09:08.296461   25072 api_server.go:182] apiserver freezer: "2:freezer:/kubepods/burstable/pode1161f1b3e871cc7ca387c45e586828a/a761588805bfe0675016679a9afa94bb44273ba811dcaad40cfb5dc81a51f204"
+I0606 15:09:08.296536   25072 exec_runner.go:51] Run: sudo cat /sys/fs/cgroup/freezer/kubepods/burstable/pode1161f1b3e871cc7ca387c45e586828a/a761588805bfe0675016679a9afa94bb44273ba811dcaad40cfb5dc81a51f204/freezer.state
+I0606 15:09:08.302080   25072 api_server.go:279] https://192.168.174.129:8443/healthz returned 200:
+ok
+I0606 15:09:08.317685   25072 api_server.go:141] control plane version: v1.30.0
+I0606 15:09:08.317709   25072 api_server.go:131] duration metric: took 24.379811ms to wait for apiserver health ...
+I0606 15:09:08.317725   25072 system_pods.go:43] waiting for kube-system pods to appear ...
+I0606 15:09:08.325281   25072 system_pods.go:59] 4 kube-system pods found
+I0606 15:09:08.325302   25072 system_pods.go:61] "etcd-srvkube" [f64e41a0-14d1-411c-9188-19a3028e43a1] Running
+I0606 15:09:08.325307   25072 system_pods.go:61] "kube-apiserver-srvkube" [caf70aae-be12-43e5-b776-1ccc2d299b9d] Running
+I0606 15:09:08.325311   25072 system_pods.go:61] "kube-controller-manager-srvkube" [1e8a0593-9472-40c7-8ac4-9bfabcd84d23] Running
+I0606 15:09:08.325314   25072 system_pods.go:61] "kube-scheduler-srvkube" [ce701d91-cbff-4244-b548-7066ff14084c] Running
+I0606 15:09:08.325321   25072 system_pods.go:74] duration metric: took 7.588481ms to wait for pod list to return data ...
+I0606 15:09:08.325333   25072 kubeadm.go:576] duration metric: took 436.180963ms to wait for: map[apiserver:true system_pods:true]
+I0606 15:09:08.325353   25072 node_conditions.go:102] verifying NodePressure condition ...
+I0606 15:09:08.329788   25072 node_conditions.go:122] node storage ephemeral capacity is 51490240Ki
+I0606 15:09:08.329827   25072 node_conditions.go:123] node cpu capacity is 4
+I0606 15:09:08.329851   25072 node_conditions.go:105] duration metric: took 4.492222ms to run NodePressure ...
+I0606 15:09:08.329860   25072 start.go:240] waiting for startup goroutines ...
+I0606 15:09:08.342381   25072 api_server.go:204] freezer state: "THAWED"
+I0606 15:09:08.342406   25072 api_server.go:253] Checking apiserver healthz at https://192.168.174.129:8443/healthz ...
+I0606 15:09:08.349663   25072 api_server.go:279] https://192.168.174.129:8443/healthz returned 200:
+ok
+I0606 15:09:08.349703   25072 addons.go:426] installing /etc/kubernetes/addons/storageclass.yaml
+I0606 15:09:08.349734   25072 exec_runner.go:151] cp: storageclass/storageclass.yaml --> /etc/kubernetes/addons/storageclass.yaml (271 bytes)
+I0606 15:09:08.350050   25072 exec_runner.go:51] Run: sudo cp -a /tmp/minikube1806649385 /etc/kubernetes/addons/storageclass.yaml
+I0606 15:09:08.389222   25072 exec_runner.go:51] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.30.0/kubectl apply -f /etc/kubernetes/addons/storageclass.yaml
+I0606 15:09:08.756992   25072 out.go:177] * Modules activés: default-storageclass, storage-provisioner
+I0606 15:09:08.758023   25072 addons.go:505] duration metric: took 871.473249ms for enable addons: enabled=[default-storageclass storage-provisioner]
+I0606 15:09:08.758059   25072 start.go:245] waiting for cluster config update ...
+I0606 15:09:08.758074   25072 start.go:254] writing updated cluster config ...
+I0606 15:09:08.759197   25072 exec_runner.go:51] Run: rm -f paused
+I0606 15:09:09.208354   25072 start.go:600] kubectl: 1.30.1, cluster: 1.30.0 (minor skew: 0)
+I0606 15:09:09.212374   25072 out.go:177] * Terminé ! kubectl est maintenant configuré pour utiliser "minikube" cluster et espace de noms "default" par défaut.

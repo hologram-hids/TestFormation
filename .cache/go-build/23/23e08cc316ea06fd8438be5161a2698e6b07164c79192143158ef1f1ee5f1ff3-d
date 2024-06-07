@@ -1,0 +1,5 @@
+./clustercidr.go
+./clustercidrspec.go
+./ipaddress.go
+./ipaddressspec.go
+./parentreference.go
