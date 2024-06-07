@@ -1,2 +1,0 @@
-# Don't rewrite line endings
-*.go -text
