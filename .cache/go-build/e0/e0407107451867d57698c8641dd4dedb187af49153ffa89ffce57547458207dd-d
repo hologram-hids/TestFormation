@@ -1,6 +1,0 @@
-./checkpointmanager.go
-./checksum.go
-./filestore.go
-./filesystem.go
-./fs.go
-./store.go

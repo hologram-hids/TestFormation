@@ -1,6 +1,0 @@
-./etag.go
-./fake.go
-./handler.go
-./metrics.go
-./negotiation.go
-./wrapper.go

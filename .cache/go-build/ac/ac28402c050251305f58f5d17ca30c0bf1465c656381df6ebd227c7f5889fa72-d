@@ -1,5 +1,0 @@
-./controller.go
-./doc.go
-./informer.go
-./interface.go
-./lister.go

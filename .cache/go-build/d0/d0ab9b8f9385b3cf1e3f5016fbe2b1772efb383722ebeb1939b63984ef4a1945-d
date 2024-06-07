@@ -1,4 +1,0 @@
-./cache_simple.go
-./cache_striped.go
-./cached_token_authenticator.go
-./stats.go

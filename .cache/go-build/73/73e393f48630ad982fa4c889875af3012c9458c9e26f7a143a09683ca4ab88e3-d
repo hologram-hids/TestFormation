@@ -1,4 +1,0 @@
-./config.go
-./doc.go
-./types.go
-./zz_generated.deepcopy.go
